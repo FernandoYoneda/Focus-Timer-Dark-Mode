@@ -1,0 +1,221 @@
+:root {
+    /* Colors */
+    --font-color: #323238;
+    --body-background: #E5E5E5;
+    --btn-background: #E1E1E6;
+    --btn-selected-background: #02799D;
+    --btn-shadow-color: rgba(0, 0, 0, 0.25);
+
+
+
+    font-size: 62.5%;
+}
+
+:root .darkMode {
+    --font-color: #FFFFFF;
+    --body-background: #121214;
+    --btn-background: #29292E;
+    --btn-selected-background: #0A3442;
+    --btn-shadow-color: rgba(247, 245, 245, 0.25);
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    min-height: 100vh;
+    display: grid;
+
+}
+
+.darkMode {
+    background-color: #121214;
+
+}
+
+
+
+
+
+main {
+    align-self: end;
+    justify-self: center;
+    margin-top: 2rem;
+
+}
+
+aside {
+    align-self: center;
+    justify-self: center;
+    margin-top: 2rem;
+
+}
+
+.timer {
+    display: flex;
+    font-size: 12.6rem;
+    color: var(--font-color);
+}
+
+main button {
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+
+}
+
+
+
+.controls {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+
+}
+
+.controls button svg path {
+    fill: var(--font-color);
+}
+
+.hide {
+    display: none;
+}
+
+
+
+.card  .buttonOn {
+    background: var(--btn-selected-background)!important;
+    fill: var(--btn-background);
+
+}
+
+
+.sounds {
+
+    width: 30.8rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    gap: 3.2rem;
+
+}
+
+.card button svg path {
+    fill: var(--font-color);
+}
+
+ .active svg path {
+    fill: var(--font-color);
+}
+
+.active svg path+path {
+    fill: var(--font-color);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    filter: drop-shadow(0px 4px 4px var(--btn-shadow-color));
+    background: var(--btn-background);
+    border-radius: 2.4rem;
+    border: none;
+    cursor: pointer;
+    width: 13.8rem;
+    height: 15.2rem;
+    cursor: pointer;
+}
+
+input[type=range] {
+    appearance: none;
+    width: 9rem;
+    height: 0.8rem;
+    position: relative;
+    border-radius: 5px;
+    background-color: var(--font-color);
+    outline: none;
+}
+
+
+
+
+
+
+.sounds button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+
+}
+
+
+.day,
+.night {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+}
+
+.day {
+    margin: 2rem 2rem 0 0;
+}
+
+.night {
+    margin: 2.4rem 2.4rem 0 0;
+}
+
+
+
+@media (min-width:800px) {
+    body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "time sound";
+
+        gap: 10rem;
+    }
+
+    main {
+        grid-area: time;
+
+        align-self: center;
+        justify-self: flex-end;
+    }
+
+    aside {
+        grid-area: sound;
+
+        align-self: center;
+        justify-self: flex-start;
+    }
+
+    
+.day {
+    margin: 6rem 6rem 0 0;
+}
+
+.night {
+    margin: 6.4rem 6.4rem 0 0;
+}
+}
